@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build:cf": "cross-env CF_PAGES=1 remix build",
-    "build:nf": "remix build --sourcemap && cp -R ./public ./netlify/functions/server",
+    "build:nf": "remix build --sourcemap && mkdir -p netlify/functions/server && cp -R public/* netlify/functions/server",
     "build": "remix build",
     "dev:wrangler": "cross-env CF_PAGES=1 wrangler pages dev ./public",
     "dev": "remix dev",
